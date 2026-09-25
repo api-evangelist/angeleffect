@@ -1,23 +1,64 @@
 aid: angeleffect
+
 name: Angeleffect
-description: 'Angeleffect is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://angeleffect.co/wp-content/uploads/2021/04/ae-og-image-e1618481851853.jpg
+
+description: 'Angeleffect is an angel investing platform that connects entrepreneurs with value‑creating investors, partners, and mentors worldwide. The site describes a global network offering access to high‑impact startup opportunities, with features such as a portfolio of over 2,200 startups across 112 countries, mentorship, and a minimum ticket size of $5,000. It provides information on its AE Network, fund structure, FAQs, and contact options, positioning itself as a bridge between capital and innovative ventures.'
+
 url: https://raw.githubusercontent.com/api-evangelist/angeleffect/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Developer reference pages return HTML shells and no machine‑readable OpenAPI spec was found.
+  evidence:
+    - url: https://dev.angeleffect.co/openapi.json
+      status: 200
+  checked: 2026-09-24
+
 tags:
 - Company
-apis: []
+- AngelInvesting
+- Platform
+- StartupFunding
+- Network
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/angeleffect-hosts.yml
+- type: PrivacyPolicy
+  url: https://angeleffect.co/privacy-and-cookie-policy/
+- type: Documentation
+  url: https://dev.angeleffect.co/
+- type: DomainSecurity
+  url: security/angeleffect-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/angeleffect
+  url: https://angeleffect.co
+
+apis: []
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
